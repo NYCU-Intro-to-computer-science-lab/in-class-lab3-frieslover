@@ -3,7 +3,7 @@ using namespace std;
 
 void hanoi(int n, int from, int to, int aux)
 {
-    if(from==1 && to==3){
+    if((from==1 && to==3) || (from==3 && to==1)){
       hanoi(n, from, aux, to);
       hanoi(n, aux, to, from);
     }
